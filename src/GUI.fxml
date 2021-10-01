@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <TabPane prefHeight="500.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="addTab" text="Add">
+               <content>
+                  <TabPane prefHeight="500.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="addProjectTab" text="Add Project">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Deadline">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="dayAddProjectTextField" prefWidth="50.0" promptText="Day" />
+                                          <TextField fx:id="monthAddProjectTextField" prefWidth="60.0" promptText="Month" />
+                                          <TextField fx:id="yearAddProjectTextField" prefWidth="70.0" promptText="Year" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Scrum Master">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersScrumMasterComboBox" onAction="#handleTeamMembers" prefWidth="250.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Product Owner">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersProductOwnerComboBox" onAction="#handleTeamMembers" prefWidth="250.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Project Creator">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersProjectCreatorComboBox" onAction="#handleTeamMembers" prefWidth="250.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="136.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="addProjectButton" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                      <Tab fx:id="addRequirementTab" text="Add Requirement">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab fx:id="addFunctionalRequirementTab" text="Add Functional Requirement">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the project">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="projectsAddFunctionalRequirementComboBox" prefWidth="150.0" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="User Story">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="userStoryTextField" prefWidth="500.0" promptText="User Story" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Deadline">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField fx:id="dayAddFunctionalRequirementTextField" prefWidth="50.0" promptText="Day" />
+                                                      <TextField fx:id="monthAddFunctionalRequirementTextField" prefWidth="60.0" promptText="Month" />
+                                                      <TextField fx:id="yearAddFunctionalRequirementTextField" prefWidth="70.0" promptText="Year" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="BASELINE_CENTER" text="Enter the estimated time">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="estimateTimeFunctionalRequirementTextField" promptText="Estimated time" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Responsible team member">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="teamMembersResponsibleAddFunctionalRequirementComboBox" prefWidth="250.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="59.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Button fx:id="addFunctionalRequirementButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content></Tab>
+                                  <Tab fx:id="addNonFunctionalRequirementTab" text="Add NonFunctional Requirement">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the project">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="projectsAddNonFunctionalRequirementComboBox" prefWidth="150.0" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Description">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="descriptionTextField" prefWidth="500.0" promptText="Description" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Deadline">
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <TextField fx:id="dayAddNonFunctionalRequirementTextField" prefWidth="50.0" promptText="Day" />
+                                                      <TextField fx:id="monthAddNonFunctionalRequirementTextField" prefWidth="60.0" promptText="Month" />
+                                                      <TextField fx:id="yearAddNonFunctionalRequirementTextField" prefWidth="70.0" promptText="Year" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label alignment="BASELINE_CENTER" text="Enter the estimated time">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="estimateTimeNonFunctionalRequirementTextField" promptText="Estimated time" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Responsible team member">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="teamMembersResponsibleAddNonFunctionalRequirementComboBox" prefWidth="250.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="59.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Button fx:id="addNonFunctionalRequirementButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content></Tab>
+                                </tabs>
+                              </TabPane>
+                           </content>
+                      </Tab>
+                        <Tab fx:id="addTaskTab" text="Add Task">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsAddTaskComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsAddTaskComboBox" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="BASELINE_CENTER" text="Title">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="titleAddTaskTextField" promptText="Title" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="BASELINE_CENTER" text="Enter the estimated time">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="estimateTimeAddTaskTextField" promptText="Estimated time" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Deadline">
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </Label>
+                                          <TextField fx:id="dayAddTaskTextField" prefWidth="50.0" promptText="Day" />
+                                          <TextField fx:id="monthAddTaskTextField" prefWidth="60.0" promptText="Month" />
+                                          <TextField fx:id="yearAddTaskTextField" prefWidth="70.0" promptText="Year" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Responsible team member">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersResponsibleAddTaskComboBox" prefWidth="250.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="99.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="addTaskButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content></Tab>
+                        <Tab fx:id="addTeamMemberTab" text="Add Team Member">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab fx:id="addNewTeamMemberTab" text="New Member">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Name">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="nameTextField" prefWidth="150.0" promptText="Name" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Email">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="emailTextField" prefWidth="150.0" promptText="Email" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="190.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Button fx:id="addNewTeamMemberButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                  </Tab>
+                                  <Tab fx:id="addTeamMemberToProjectTab" text="To Project">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the project">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="projectsAddTeamMemberToProjectComboBox" prefWidth="150.0" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Team member">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="teamMembersAddTeamMemberToProjectComboBox" prefWidth="250.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="205.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Button fx:id="addTeamMemberToProjectButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                  </Tab>
+                                    <Tab fx:id="addTeamMemberToRequirementTab" text="To Requirement">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the project">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="projectsAddTeamMemberToRequirementComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the requirement">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="requirementsAddTeamMemberToRequirementComboBox" prefWidth="150.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Team member">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="teamMembersAddTeamMemberToRequirementComboBox" prefWidth="250.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="162.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Button fx:id="addTeamMemberToRequirementButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab fx:id="addTeamMemberToTaskTab" text="To Task">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the project">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="projectsAddTeamMemberToTaskComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the requirement">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="requirementsAddTeamMemberToTaskComboBox" onAction="#handleTasks" prefWidth="150.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Choose the ID of the task">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="tasksAddTeamMemberToTaskComboBox" prefWidth="150.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                                   <children>
+                                                      <Label text="Team member">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <ComboBox fx:id="teamMembersAddTeamMemberToTaskComboBox" prefWidth="250.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="BOTTOM_RIGHT" prefHeight="120.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Button fx:id="addTeamMemberToTaskButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Add">
+                                                         <HBox.margin>
+                                                            <Insets bottom="10.0" right="10.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </content></Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+          </Tab>
+          <Tab fx:id="editTab" text="Edit">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="editReorderTab" text="Reorder Requirements">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsReorderRequirementsComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsReorderRequirementsComboBox" onAction="#handleTeamMembers" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the new position">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="positionsReorderRequirementComboBox" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="198.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="saveReorderButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Save">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content></Tab>
+                      <Tab fx:id="editRemoveTab" text="Remove Requirements">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsRemoveRequirementsComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsRemoveRequirementsComboBox" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="250.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="removeButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Remove">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content></Tab>
+                        <Tab fx:id="editChangeRoleTab" text="Change Role">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsChangeRoleComboBox" onAction="#handleTeamMembers" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Team member">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersChangeRoleComboBox" prefWidth="250.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="New Role">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="roles" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="198.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="saveChangeRoleButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Save">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+          </Tab>
+            <Tab fx:id="searchTab" text="Search">
+               <content>
+                  <TabPane prefHeight="386.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="searchEmployeeTab" text="Search by Employee">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Team member">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersSearchEmployeeComboBox" onAction="#handleButtons" prefWidth="250.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="36.0" prefWidth="600.0">
+                                       <children>
+                                          <Label text="The team member has participated in these projects:">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="216.0" prefWidth="600.0">
+                                       <children>
+                                          <TextArea fx:id="projectsTextArea" prefHeight="240.0" prefWidth="599.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content></Tab>
+                      <Tab fx:id="searchProjectTab" text="Search by Project">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsSearchProjectComboBox" onAction="#handleButtons" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="600.0">
+                                       <children>
+                                          <Label text="These are the requirements for this project:">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="214.0" prefWidth="600.0">
+                                       <children>
+                                          <TextArea fx:id="requirementsTextArea" prefHeight="214.0" prefWidth="602.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content></Tab>
+                        <Tab fx:id="searchRequirementTab" text="Search by Requirement">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsSearchRequirementComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsSearchRequirementComboBox" onAction="#handleButtons" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_LEFT" prefHeight="33.0" prefWidth="600.0">
+                                       <children>
+                                          <Label text="These are the tasks for this requirement:">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="159.0" prefWidth="600.0">
+                                       <children>
+                                          <TextArea fx:id="tasksAreaTextArea" prefHeight="129.0" prefWidth="599.0" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+            <Tab fx:id="verifyTab" text="Verify">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="verifyTaskTab" text="Task">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsVerifyTaskComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsVerifyTaskComboBox" onAction="#handleTasks" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the task">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="tasksVerifyTaskComboBox" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="211.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Button fx:id="approveTaskButton" mnemonicParsing="false" onAction="#handleButtons" text="Approve">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="rejectTaskButton" mnemonicParsing="false" onAction="#handleButtons" text="Reject">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                      <Tab fx:id="verifyFunctionalRequirementTab" text="Functional Requirement">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsVerifyFunctionalRequirementComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsVerifyFunctionalRequirementComboBox" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="250.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="verifyFunctionalRequirementButton" mnemonicParsing="false" onAction="#handleButtons" text="Verify">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                        <Tab fx:id="verifyNonFunctionalRequirementTab" text="Non-Functional Requirement">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsVerifyNonFunctionalRequirementComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsVerifyNonFunctionalRequirementComboBox" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="251.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Button fx:id="approveNonFunctionalRequirementButton" mnemonicParsing="false" onAction="#handleButtons" text="Approve">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="rejectNonFunctionalRequirementButton" mnemonicParsing="false" onAction="#handleButtons" text="Reject">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="verifyProjectTab" text="Project">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsVerifyComboBox" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="282.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="verifyProjectButton" mnemonicParsing="false" onAction="#handleButtons" text="Verify">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+            <Tab fx:id="reportActivityTab" text="Report Activity">
+               <content>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="reportActivityTaskTab" text="Task">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsReportActivityTaskComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsReportActivityTaskComboBox" onAction="#handleTasks" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the task">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="tasksReportActivityTaskComboBox" onAction="#handleTeamMembers" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Team member">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersReportActivityTaskComboBox" prefWidth="250.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Number of hours worked">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="hoursWorkedReportActivityTaskTextField" promptText="Hours worked" />
+                                          <CheckBox fx:id="endedTaskReportActivityTaskCheckBox" mnemonicParsing="false" text="Ended" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="121.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="reportTaskButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Report">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                      <Tab fx:id="reportActivityNonFunctionalRequirementTab" text="Non-Functional Requirement">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsReportActivityNonFunctionalRequirementComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsReportActivityNonFunctionalRequirementComboBox" onAction="#handleTeamMembers" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Team member">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="teamMembersReportActivityNonFunctionalRequirementComboBox" prefWidth="250.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Number of hours worked">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="hoursWorkedReportActivityNonFunctionalRequirementTextField" promptText="Hours worked" />
+                                          <CheckBox fx:id="endedNonFunctionalRequirementReportActivityCheckBox" mnemonicParsing="false" text="Ended" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="163.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="reportNonFunctionalRequirementButton" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#handleButtons" text="Report">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                        <Tab fx:id="reportActivityFunctionalRequirementTab" text="Functional Requirement">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsReportActivityFunctionalRequirementComboBox" onAction="#handleRequirements" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the requirement">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="requirementsReportActivityFunctionalRequirementComboBox" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="239.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="reportFunctionalRequirementButton" mnemonicParsing="false" onAction="#handleButtons" text="Report">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="reportActivityProjectTab" text="Project">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Choose the ID of the project">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <ComboBox fx:id="projectsReportActivityProjectComboBox" prefWidth="150.0" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="286.0" prefWidth="600.0">
+                                       <children>
+                                          <Button fx:id="reportProjectButton" mnemonicParsing="false" onAction="#handleButtons" text="Report">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </content>
+            </Tab>
+            <Tab fx:id="exportTab" text="Export">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="exportButton" mnemonicParsing="false" text="Export" />
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>

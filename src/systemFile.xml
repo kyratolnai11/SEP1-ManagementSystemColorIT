@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ManagementSystem>
+  <projects>
+    <requirements>
+      <estimatedTime>50</estimatedTime>
+      <userStory>This is functional</userStory>
+      <requirementID>1</requirementID>
+      <teamMembers>
+        <role>Scrum Master</role>
+        <name>Bianca</name>
+        <email>a</email>
+      </teamMembers>
+      <deadline>
+        <month>7</month>
+        <year>2021</year>
+        <day>25</day>
+      </deadline>
+      <tasks>
+        <estimateTime>12</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>7</month>
+          <year>2021</year>
+          <day>25</day>
+        </deadline>
+        <teamMembers>
+          <role>Scrum Master</role>
+          <name>Bianca</name>
+          <email>a</email>
+        </teamMembers>
+        <taskID>0</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>5</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>12</month>
+          <year>2022</year>
+          <day>12</day>
+        </deadline>
+        <teamMembers>
+          <role>Product Owner</role>
+          <name>Kyra</name>
+          <email>b</email>
+        </teamMembers>
+        <taskID>1</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>10</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>7</month>
+          <year>2021</year>
+          <day>25</day>
+        </deadline>
+        <teamMembers>
+          <role>Product Owner</role>
+          <name>Kyra</name>
+          <email>b</email>
+        </teamMembers>
+        <taskID>2</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>2</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>12</month>
+          <year>2022</year>
+          <day>12</day>
+        </deadline>
+        <teamMembers>
+          <role>Scrum Master</role>
+          <name>Bianca</name>
+          <email>a</email>
+        </teamMembers>
+        <taskID>3</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>7</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>7</month>
+          <year>2021</year>
+          <day>25</day>
+        </deadline>
+        <teamMembers>
+          <role>Product Owner</role>
+          <name>Kyra</name>
+          <email>b</email>
+        </teamMembers>
+        <taskID>4</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>16</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>12</month>
+          <year>2022</year>
+          <day>12</day>
+        </deadline>
+        <teamMembers>
+          <role>Project Creator</role>
+          <name>Tabita</name>
+          <email>c</email>
+        </teamMembers>
+        <taskID>5</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <hoursWorked>0.0</hoursWorked>
+      <status>Not Started</status>
+    </requirements>
+    <requirements>
+      <estimatedTime>5</estimatedTime>
+      <description>This is non functional</description>
+      <requirementID>2</requirementID>
+      <teamMembers>
+        <role>Product Owner</role>
+        <name>Kyra</name>
+        <email>b</email>
+      </teamMembers>
+      <deadline>
+        <month>12</month>
+        <year>2022</year>
+        <day>12</day>
+      </deadline>
+      <hoursWorked>0.0</hoursWorked>
+      <status>Not Started</status>
+    </requirements>
+    <requirements>
+      <estimatedTime>6</estimatedTime>
+      <description>This is non functional</description>
+      <requirementID>3</requirementID>
+      <teamMembers>
+        <role>Project Creator</role>
+        <name>Tabita</name>
+        <email>c</email>
+      </teamMembers>
+      <deadline>
+        <month>12</month>
+        <year>2022</year>
+        <day>12</day>
+      </deadline>
+      <hoursWorked>0.0</hoursWorked>
+      <status>Not Started</status>
+    </requirements>
+    <deadline>
+      <month>12</month>
+      <year>2022</year>
+      <day>12</day>
+    </deadline>
+    <teamMembers>
+      <role>Scrum Master</role>
+      <name>Bianca</name>
+      <email>a</email>
+    </teamMembers>
+    <teamMembers>
+      <role>Product Owner</role>
+      <name>Kyra</name>
+      <email>b</email>
+    </teamMembers>
+    <teamMembers>
+      <role>Project Creator</role>
+      <name>Tabita</name>
+      <email>c</email>
+    </teamMembers>
+    <projectID>0</projectID>
+    <hoursWorked>0.0</hoursWorked>
+    <status>Not started</status>
+  </projects>
+  <projects>
+    <requirements>
+      <estimatedTime>23</estimatedTime>
+      <userStory>This is functional</userStory>
+      <requirementID>1</requirementID>
+      <teamMembers>
+        <role>Scrum Master</role>
+        <name>Milan</name>
+        <email>d</email>
+      </teamMembers>
+      <deadline>
+        <month>7</month>
+        <year>2021</year>
+        <day>25</day>
+      </deadline>
+      <tasks>
+        <estimateTime>2</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>7</month>
+          <year>2021</year>
+          <day>25</day>
+        </deadline>
+        <teamMembers>
+          <role>Scrum Master</role>
+          <name>Milan</name>
+          <email>d</email>
+        </teamMembers>
+        <taskID>0</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>5</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>12</month>
+          <year>2022</year>
+          <day>12</day>
+        </deadline>
+        <teamMembers>
+          <role>Project Creator</role>
+          <name>Allan</name>
+          <email>f</email>
+        </teamMembers>
+        <taskID>1</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>11</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>7</month>
+          <year>2021</year>
+          <day>25</day>
+        </deadline>
+        <teamMembers>
+          <role>Product Owner</role>
+          <name>Romi</name>
+          <email>e</email>
+        </teamMembers>
+        <taskID>2</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <tasks>
+        <estimateTime>17</estimateTime>
+        <totalHoursWorked>0.0</totalHoursWorked>
+        <relatedReqID>1</relatedReqID>
+        <title>This is a task</title>
+        <deadline>
+          <month>12</month>
+          <year>2022</year>
+          <day>12</day>
+        </deadline>
+        <teamMembers>
+          <role>Project Creator</role>
+          <name>Allan</name>
+          <email>f</email>
+        </teamMembers>
+        <taskID>3</taskID>
+        <status>Not Started</status>
+      </tasks>
+      <hoursWorked>0.0</hoursWorked>
+      <status>Not Started</status>
+    </requirements>
+    <requirements>
+      <estimatedTime>4</estimatedTime>
+      <description>This is non functional</description>
+      <requirementID>2</requirementID>
+      <teamMembers>
+        <role>Product Owner</role>
+        <name>Romi</name>
+        <email>e</email>
+      </teamMembers>
+      <deadline>
+        <month>12</month>
+        <year>2022</year>
+        <day>12</day>
+      </deadline>
+      <hoursWorked>0.0</hoursWorked>
+      <status>Not Started</status>
+    </requirements>
+    <requirements>
+      <estimatedTime>7</estimatedTime>
+      <description>This is non functional</description>
+      <requirementID>3</requirementID>
+      <teamMembers>
+        <role>Project Creator</role>
+        <name>Allan</name>
+        <email>f</email>
+      </teamMembers>
+      <deadline>
+        <month>12</month>
+        <year>2022</year>
+        <day>12</day>
+      </deadline>
+      <hoursWorked>0.0</hoursWorked>
+      <status>Not Started</status>
+    </requirements>
+    <deadline>
+      <month>4</month>
+      <year>2023</year>
+      <day>1</day>
+    </deadline>
+    <teamMembers>
+      <role>Scrum Master</role>
+      <name>Milan</name>
+      <email>d</email>
+    </teamMembers>
+    <teamMembers>
+      <role>Product Owner</role>
+      <name>Romi</name>
+      <email>e</email>
+    </teamMembers>
+    <teamMembers>
+      <role>Project Creator</role>
+      <name>Allan</name>
+      <email>f</email>
+    </teamMembers>
+    <projectID>1</projectID>
+    <hoursWorked>0.0</hoursWorked>
+    <status>Not started</status>
+  </projects>
+  <employees>
+    <role>Scrum Master</role>
+    <name>Bianca</name>
+    <email>a</email>
+  </employees>
+  <employees>
+    <role>Product Owner</role>
+    <name>Kyra</name>
+    <email>b</email>
+  </employees>
+  <employees>
+    <role>Project Creator</role>
+    <name>Tabita</name>
+    <email>c</email>
+  </employees>
+  <employees>
+    <role>Scrum Master</role>
+    <name>Milan</name>
+    <email>d</email>
+  </employees>
+  <employees>
+    <role>Product Owner</role>
+    <name>Romi</name>
+    <email>e</email>
+  </employees>
+  <employees>
+    <role>Project Creator</role>
+    <name>Allan</name>
+    <email>f</email>
+  </employees>
+  <employees>
+    <role>Employee</role>
+    <name>David</name>
+    <email>g</email>
+  </employees>
+</ManagementSystem>
